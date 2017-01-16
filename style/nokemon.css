@@ -1,0 +1,21 @@
+/* image */
+
+table.tile {
+  border-collapse: collapse;
+  border: solid 0px transparent;
+}
+
+table.tile tr td {
+  margin:0px;
+  padding:0px;
+  height:5px;
+  width:5px;
+}
+
+table.tile tr td.dark {
+  background-color: #333333;
+}
+
+table.tile tr td.light {
+  background-color: #EEEEEE;
+}

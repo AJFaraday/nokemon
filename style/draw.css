@@ -1,0 +1,32 @@
+div.draw_tool {
+  padding: 20px;
+}
+
+div.draw_preview {
+  float:left;
+  margin-left:10px;
+}
+
+table.draw_tool {
+  float:left;
+  border-collapse: collapse;
+  cursor: pointer;
+}
+
+table.draw_tool tr {
+
+}
+
+table.draw_tool tr td {
+  margin:0px;
+  padding:0px;
+  height:10px;
+  width:10px;
+  border: solid 1px #dddddd;
+  background-color: #EEEEEE;
+}
+
+table.draw_tool tr td.dark {
+  background-color: #333333;
+}
+
