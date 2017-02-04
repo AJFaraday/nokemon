@@ -8,14 +8,14 @@ table.tile {
 table.tile tr td {
   margin:0px;
   padding:0px;
-  height:5px;
-  width:5px;
-}
-
-table.tile tr td.dark {
-  background-color: #333333;
+  height:3px;
+  width:3px;
 }
 
 table.tile tr td.light {
   background-color: #EEEEEE;
+}
+
+table.tile tr td.dark {
+  background-color: #333333;
 }

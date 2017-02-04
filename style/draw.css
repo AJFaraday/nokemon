@@ -5,6 +5,8 @@ div.draw_tool {
 div.draw_preview {
   float:left;
   margin-left:10px;
+  max-width:500px;
+  word-wrap:break-word;
 }
 
 table.draw_tool {
