@@ -15,10 +15,25 @@
         16
       );
 
+      full_image = new Image(
+        [4294967295,4294967295,4294967295,4294967295,4294967295,4294967295,4294967295,4294967295],
+        16 ,
+        16
+      );
+
       display = new Display(128, 128, '#display');
 
       display.draw(image, 0, 0);
-      display.other_draw(image, 112, 112);
+      display.draw(full_image, 112, 112);
+
+      setTimeout(
+        function() {
+          display.clear(112, 112, full_image.width, full_image.height)
+        },
+        10000
+      )
+
+
     });
   </script>
 
