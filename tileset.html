@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<head>
+  <link rel="stylesheet" type="text/css" href="style/nokemon.css"/>
+
+  <script type="text/javascript" src="ext/jquery-3.1.0.min.js"></script>
+
+  <script type="text/javascript" src="lib/image.js"></script>
+  <script type="text/javascript" src="lib/text.js"></script>
+  <script type="text/javascript" src="lib/display.js"></script>
+  <script type="text/javascript" src="lib/utils.js"></script>
+
+  <script type="text/javascript" src="data/tilesets/main.js"></script>
+  <script type="text/javascript" src="data/tilesets/frame.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+
+      keys = [];
+      var tileset = data.tilesets.frame;
+      for(key in tileset) {keys.push(key)}
+
+      for(var x = 0; x < 100; x++){
+        tile = $('<div>').css('float','left');
+        $('#image_target').append(tile);
+
+        tile_image = tileset[keys[Math.floor(Math.random() * keys.length)]];
+        tile_image.render(tile)
+      }
+
+      $.each(keys, function(_, key) {
+        var row = $('<tr>');
+        row.append($('<td>').html(key));
+        var tile = $('<div>');
+        tileset[key].render(tile);
+        row.append($('<td>').html(tile));
+        $('table#glossary').append(row);
+      });
+    });
+  </script>
+
+</head>
+<body>
+<div id="image_target" style="width:160px;float:left;"></div>
+<table id="glossary" style="float:left;"></table>
+</body>
+

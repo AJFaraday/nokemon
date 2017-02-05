@@ -8,31 +8,21 @@
   <script type="text/javascript" src="lib/utils.js"></script>
   <script type="text/javascript">
     $(document).ready(function() {
-      image1 = new Image(
-        "10000001" +
-        "01000010" +
-        "00100100" +
-        "00011000" +
-        "00011000" +
-        "00100100" +
-        "01000010" +
-        "10000001",
-        8,8
-      );
-      image1.render('#image_target');
 
-      image2 = new Image(
-        [0, 0, 0, 2097264, 6307808, 538984416, 681584800, 681574400],
-        16, 16
-      );
-      image2.render('#image_target2');
+      image = new Image([4227856895,4244634879,4269801087,4282384287,4291297249,4294541308,536776703,3892311039], 16 ,16)
+      image2 = new Image([4194302463,4227855359,4093639679,4194303231,4236246847,4287594464,536776703,3892311039], 16 ,16)
 
+      var tile;
+      for(var x = 0; x < 100; x++){
+        tile = $('<div>').css('float','left');
+        $('#image_target').append(tile);
+        image.render(tile)
+      }
     });
   </script>
 
 </head>
 <body>
 <div id="image_target"></div>
-<div id="image_target2"></div>
 </body>
 

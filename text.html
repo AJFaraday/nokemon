@@ -13,14 +13,19 @@
   <script type="text/javascript">
     $(document).ready(function() {
 
-      display = new Display(128, 128, '#display');
+      display = new Display(160, 144, '#display');
 
-      text = new Text(
-        'this is very hard to do',
+      alphabet = new Text(
+        'abcdefghijklmnopqrstuvwxyz.',
+        21
+      );
+      numbers = new Text(
+        '.,0123456789',
         17
       );
 
-      display.write(text, 0, 0);
+      display.write(alphabet, 0, 0);
+      display.write(numbers, 0, 16);
 
     });
   </script>

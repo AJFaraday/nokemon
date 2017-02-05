@@ -5,34 +5,25 @@
   <script type="text/javascript" src="ext/jquery-3.1.0.min.js"></script>
 
   <script type="text/javascript" src="lib/image.js"></script>
+  <script type="text/javascript" src="lib/text.js"></script>
+  <script type="text/javascript" src="lib/frame.js"></script>
   <script type="text/javascript" src="lib/display.js"></script>
   <script type="text/javascript" src="lib/utils.js"></script>
+
+  <script type="text/javascript" src="data/font.js"></script>
+  <script type="text/javascript" src="data/tilesets/main.js"></script>
+  <script type="text/javascript" src="data/tilesets/frame.js"></script>
+
+
   <script type="text/javascript">
     $(document).ready(function() {
-      image = new Image(
-        [2015265825,2216795175,2619832350,25166208,62915520,1073897478,806098968,267386880],
-        16,
-        16
-      );
+      display = new Display(160, 144, '#display');
 
-      full_image = new Image(
-        [4294967295,4294967295,4294967295,4294967295,4294967295,4294967295,4294967295,4294967295],
-        16 ,
-        16
-      );
+      t = new Text('testing ground', 15);
+      display.write(t, 0, 0);
 
-      display = new Display(128, 128, '#display');
-
-      display.draw(image, 0, 0);
-      display.draw(full_image, 112, 112);
-
-      setTimeout(
-        function() {
-          display.clear(112, 112, full_image.width, full_image.height)
-        },
-        10000
-      )
-
+      frame = new Frame(12, 5, 'in a window');
+      frame.draw(display, 2, 2);
 
     });
   </script>
